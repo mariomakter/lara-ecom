@@ -8,7 +8,7 @@
             </button>
             <div class="modal-body d-flex">
                 <div class="product-single-img w-50">
-                    <img src="assets/images/product/product-details.jpg" alt="">
+                    <img src="{{ asset('assets/frontend') }}/images/product/product-details.jpg" alt="">
                 </div>
                 <div class="product-single-content w-50">
                     <h3>Pure Nature Hohey</h3>

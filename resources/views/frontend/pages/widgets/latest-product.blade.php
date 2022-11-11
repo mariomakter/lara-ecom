@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <h2>Our Latest Product</h2>
-                    <img src="assets/images/section-title.png" alt="">
+                    <img src="{{ asset('assets/frontend') }}/images/section-title.png" alt="">
                 </div>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/15.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/15.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -42,7 +42,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>New</span>
-                        <img src="assets/images/product/11.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/11.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -70,7 +70,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/14.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/14.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -98,7 +98,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>New</span>
-                        <img src="assets/images/product/12.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/12.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -126,7 +126,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/10.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/10.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -154,7 +154,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>New</span>
-                        <img src="assets/images/product/9.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/9.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -182,7 +182,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/8.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/8.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -210,7 +210,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>New</span>
-                        <img src="assets/images/product/7.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/7.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -238,7 +238,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>New</span>
-                        <img src="assets/images/product/4.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/4.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -266,7 +266,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/6.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/6.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -294,7 +294,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/3.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/3.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
@@ -322,7 +322,7 @@
                 <div class="product-wrap">
                     <div class="product-img">
                         <span>Sale</span>
-                        <img src="assets/images/product/5.jpg" alt="">
+                        <img src="{{ asset('assets/frontend') }}/images/product/5.jpg" alt="">
                         <div class="product-icon flex-style">
                             <ul>
                                 <li><a data-toggle="modal" data-target="#exampleModalCenter" href="javascript:void(0);"><i class="fa fa-eye"></i></a></li>
