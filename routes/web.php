@@ -31,6 +31,6 @@ Route::prefix('admin/')->group(function(){
     });
 
     //Resource Controller
-    Route::resource('category',CategoryController::class);
+    Route::resource('categories',CategoryController::class);
 
 });

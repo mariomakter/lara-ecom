@@ -17,6 +17,9 @@
     <script src="{{ asset('assets/backend') }}/js/base/search.js"></script>
     <script src="{{ asset('assets/backend') }}/js/base/settings.js"></script>
     <script src="{{ asset('assets/backend') }}/js/base/init.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
     <!-- Template Base Scripts End -->
     <!-- Page Specific Scripts Start -->
     {{-- <script src="{{ asset('assets/backend') }}/js/cs/charts.extend.js"></script>

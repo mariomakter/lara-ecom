@@ -1,11 +1,10 @@
 <!-- User Menu Start -->
-<div class="user-container d-flex">
+<div class="user-container d-flex justify-content-start">
     <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <img class="profile" alt="profile" src="{{ asset('assets/backend') }}/img/profile/profile-11.jpg" />
       <div class="name">Admin</div>
     </a>
     <div class="dropdown-menu dropdown-menu-end user-menu wide">
-
       <div class="row mb-1 ms-0 me-0">
         <div class="col-12 p-1 mb-3 pt-3">
           <div class="separator-light"></div>

@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Brian2694\Toastr\Facades\Toastr;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 
 class CategoryController extends Controller
 {
@@ -15,17 +19,25 @@ class CategoryController extends Controller
         //return $categories;
         return view('backend.pages.category.index',compact('categories'));
 
+
     }
 
     public function create()
     {
-        //
+       return view('backend.pages.category.create');
     }
 
 
-    public function store(Request $request)
+    public function store(StoreCategoryRequest $request)
     {
-        //
+         $test = Category::create([
+        'title' => $request->title,
+        'slug' => Str::slug($request->title),
+       ]);
+    //    dd($test);
+
+       Toastr::success('Data Store Successfully!');
+       return redirect()->route('categories.index');
     }
 
 
@@ -35,15 +47,23 @@ class CategoryController extends Controller
     }
 
 
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        $category = Category::whereslug($slug)->first();
+        return view('backend.pages.category.update', compact('category'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(UpdateCategoryRequest $request, $slug)
     {
-        //
+        $category = Category::whereslug($slug)->first();
+        $category->update([
+            'title' => $request->title,
+            'slug' => Str::slug($request->title),
+            'is_active' => $request->filled('is_active'),
+        ]);
+        Toastr::info('Data Updated Successfully!');
+        return redirect()->route('categories.index');
     }
 
 

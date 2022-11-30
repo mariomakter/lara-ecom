@@ -17,7 +17,7 @@
     <h1>Category List Table</h1>
     <div class="col-12">
         <div class="d-flex justify-content-end">
-            <a href="{{ route('category.create') }}" class="btn btn-primary">
+            <a href="{{ route('categories.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus-circle"></i>
                 Add New Category
             </a>
@@ -48,10 +48,10 @@
                                     setting
                                     </button>
                                     <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('category.edit', $category->slug) }}">
+                                    <li><a class="dropdown-item" href="{{ route('categories.edit', $category->slug) }}">
                                     <i class="fas fa-edit"></i> Edit</a></li>
                                     <li>
-                                        <form action="{{ route('category.destroy', $category->slug) }}" method="post">
+                                        <form action="{{ route('categories.destroy', $category->slug) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button class="dropdown-item show_confirm" type="submit"><i class="fas fa-trash"></i> Delete</a></button>
