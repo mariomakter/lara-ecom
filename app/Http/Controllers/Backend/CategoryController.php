@@ -49,7 +49,7 @@ class CategoryController extends Controller
 
     public function edit($slug)
     {
-        $category = Category::whereslug($slug)->first();
+        $category = Category::whereSlug($slug)->first();
         return view('backend.pages.category.update', compact('category'));
     }
 
@@ -67,8 +67,11 @@ class CategoryController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        $category = Category::whereSlug($slug)->first()->delete();
+        Toastr::info('Data Deleted Successfully!');
+        return redirect()->route('categories.index');
+
     }
 }
