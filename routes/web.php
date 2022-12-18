@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\TestimonialController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -32,5 +33,6 @@ Route::prefix('admin/')->group(function(){
 
     //Resource Controller
     Route::resource('categories',CategoryController::class);
+    Route::resource('testimonial',TestimonialController::class);
 
 });
