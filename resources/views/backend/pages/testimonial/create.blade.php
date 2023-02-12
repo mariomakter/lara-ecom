@@ -1,13 +1,13 @@
 @extends('backend.layouts.master')
 @push('admin_style')
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" integrity="sha512-In/+MILhf6UMDJU4ZhDL0R0fEpsp4D3Le23m6+ujDWXwl3whwpucJG1PEmI3B07nyJx+875ccs+yX2CqQJUxUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @section('admin_content')
 <div class="row">
     <h1 class="d-flex justify-content-end">Testimonial/create</h1>
     <div class="col-12">
         <div class="d-flex justify-content-start">
-            <a href="{{ route('categories.index') }}" class="btn btn-primary">
+            <a href="{{ route('testimonial.index') }}" class="btn btn-primary">
                 <i class="fas fa-backward"></i>
                 Back to Testimonial
             </a>
@@ -51,7 +51,7 @@
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Client Image</label>
-                    <input type="file" name="client_image" id="client_image" class="form-control @error('client_image')
+                    <input type="file" name="client_image" id="client_image" class="form-control dropify @error('client_image')
                         is-invalid
                     @enderror" placeholder="Client Image">
                     @error('client_image')
@@ -76,5 +76,8 @@
 </div>
 @endsection
 @push('admin_script')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('.dropify').dropify();
+</script>
 @endpush
