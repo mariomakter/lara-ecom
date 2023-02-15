@@ -44,28 +44,7 @@ class TestimonialController extends Controller
         return redirect()->route('testimonial.index');
     }
 
-    public function image_upload($request, $item_id){
-        $testimonial = Testimonial::findorFail($item_id);
-    //     dd($request->all(), $testimonial,
-    // $request->hash_File('client_image'));
-    if($request->hasFile('client_image')){
-        if($testimonial->client_image != 'default-client.jpg'){
-            $photo_location = 'public/uploads/testimonials/';
-            $old_photo_location = $photo_location .$testimonial->client_image;
-            if(file_exists($old_photo_location)){
-                unlink(base_path($old_photo_location));
-            }
-        }
-        $photo_location = 'public/uploads/testimonials/';
-        $uploaded_photo = $request->file('client_image');
-        $new_photo_name = $testimonial->id . '.' .$uploaded_photo->getClientOriginalExtension();
-        $new_photo_location = $photo_location . $new_photo_name;
-        Image::make($uploaded_photo)->resize(105,105)->save(base_path($new_photo_location), 40);
-        $check = $testimonial->update([
-            'client_image' => $new_photo_name,
-        ]);
-    }
-    }
+
     /**
      * Display the specified resource.
      *
@@ -106,8 +85,34 @@ class TestimonialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
+        $testimonial = Testimonial::where('client_name_slug', $slug)->first()->delete();
 
+        Toastr::info('Data Updated Successfully!');
+        return redirect()->route('testimonial.index');
+    }
+
+    public function image_upload($request, $item_id){
+        $testimonial = Testimonial::findorFail($item_id);
+    //     dd($request->all(), $testimonial,
+    // $request->hash_File('client_image'));
+    if($request->hasFile('client_image')){
+        if($testimonial->client_image != 'default-client.jpg'){
+            $photo_location = 'public/uploads/testimonials/';
+            $old_photo_location = $photo_location .$testimonial->client_image;
+            if(file_exists($old_photo_location)){
+                unlink(base_path($old_photo_location));
+            }
+        }
+        $photo_location = 'public/uploads/testimonials/';
+        $uploaded_photo = $request->file('client_image');
+        $new_photo_name = $testimonial->id . '.' .$uploaded_photo->getClientOriginalExtension();
+        $new_photo_location = $photo_location . $new_photo_name;
+        Image::make($uploaded_photo)->resize(105,105)->save(base_path($new_photo_location), 40);
+        $check = $testimonial->update([
+            'client_image' => $new_photo_name,
+        ]);
+    }
     }
 }
